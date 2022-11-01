@@ -10,7 +10,7 @@ const create_CadryMed = (payload)=>{
 }
 
 const update_CadryMed = (payload)=>{
-    return axios.post(`/api/organization/meds`, payload.data)
+    return axios.post(`/api/organization/med/${payload.id}/accepted`, payload.data)
 }
 
 

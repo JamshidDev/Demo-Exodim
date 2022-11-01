@@ -176,7 +176,7 @@
                 >
                   {{ formatNumber(allVakant) }}
                 </h2>
-                <h6 class="text-center text-white mt-1">Vakansiya</h6>
+                <h6 class="text-center text-white mt-1">Bo'sh ish o'rinlari</h6>
               </div>
             </div>
 
@@ -249,10 +249,15 @@
           </div>
         </div>
 
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
+              <span class="text-blue-600 text-sm uppercase font-semibold"
                 >Erkak va Ayol</span
               >
             </div>
@@ -262,6 +267,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-center"
             >
@@ -292,13 +298,25 @@
                 severity="success"
                 :value="`${allWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase text-lg my-2">Erkakalar - <span class="font-bold text-lg text-blue-500">{{this.allManCadries}}</span> </h6>   <Tag class="px-2 text-sm" rounded :value="`${allManChart}%`"></Tag>
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase text-lg my-2">Ayollar - <span class="font-bold text-lg text-green-500">{{this.allWomanCadries}}</span> </h6>  <Tag class="px-2 text-sm" rounded severity="success" :value="`${allWomanChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
+              <span class="text-blue-600 text-sm uppercase font-semibold"
                 >Nafaqa yoshidagi xodimlar</span
               >
             </div>
@@ -308,6 +326,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-center"
             >
@@ -338,14 +357,26 @@
                 severity="success"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase my-2 text-lg">Erkakalar - <span class="font-bold text-lg text-blue-500">{{this.pensionsMan}}</span> </h6>   <Tag class="px-2 text-sm" rounded :value="`${pensionsManChart}%`"></Tag>
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase my-2 text-lg">Ayollar - <span class="font-bold text-lg text-green-500">{{this.pensionWoman}}</span> </h6>  <Tag class="px-2 text-sm" rounded severity="success" :value="`${pensionWomanChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
-                >Kasanachi xodimlar</span
+              <span class="text-blue-600  uppercase text-sm font-semibold"
+                >Shartnomachi xodimlar</span
               >
             </div>
             <div class="col-2 flex justify-content-end">
@@ -354,6 +385,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-start"
             >
@@ -372,13 +404,25 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-start">
+              <h6 class="uppercase text-lg my-2">Shartnomachi - <span class="font-bold text-lg text-blue-500">{{allContract}}</span> </h6>   
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class=" my-2 text-lg">Umumiy </h6>  <Tag class="px-2 text-sm " rounded severity="danger" :value="`${allContractChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
+              <span class="text-blue-600 text-sm uppercase font-semibold"
                 >Tibbiy ko'rik ma'lumotlari</span
               >
             </div>
@@ -388,6 +432,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-center"
             >
@@ -419,14 +464,26 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase text-lg my-2">Muddati tugaganlar  - <span class="font-bold text-lg text-yellow-500">{{meds}}</span> </h6>   <Tag class="px-2 text-sm" rounded severity="warning" :value="`${medsChart}%`"></Tag>
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase text-lg my-2">Kiritilmaganlar - <span class="font-bold text-lg text-red-500">{{mednotCount}}</span> </h6>  <Tag class="px-2 text-sm" rounded severity="danger" :value="`${mednotCountChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
+              <span class="text-blue-600 text-sm uppercase font-semibold"
                 >Ta'tildagi xodimlar</span
               >
             </div>
@@ -436,6 +493,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-center"
             >
@@ -463,13 +521,25 @@
                 severity="danger"
                 :value="`${vacations_DecChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase text-lg my-2">Mehnat ta'tili - <span class="font-bold text-lg text-yellow-500">{{vacations}}</span> </h6>   <Tag class="px-2 text-sm" rounded severity="warning" :value="`${vacationsChart}%`"></Tag>
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class="uppercase text-lg my-2">Bola parvarish ta'tili - <span class="font-bold text-lg text-red-500">{{vacations_Dec}}</span> </h6>  <Tag class="px-2 text-sm" rounded severity="danger" :value="`${vacations_DecChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
+              <span class="text-blue-600 text-sm uppercase font-semibold"
                 >Mehnat faoliyat</span
               >
             </div>
@@ -479,6 +549,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-start"
             >
@@ -497,13 +568,25 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-start">
+              <h6 class="uppercase text-lg my-2">Kirirtilmaganlar - <span class="font-bold text-lg text-blue-500">{{careersCount}}</span> </h6>   
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class=" my-2 text-lg">Umumiy </h6>  <Tag class="px-2 text-sm " rounded severity="danger" :value="`${careersCountChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
+              <span class="text-blue-600 text-sm uppercase font-semibold"
                 >Qarindoshliligi</span
               >
             </div>
@@ -513,6 +596,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-start"
             >
@@ -531,14 +615,26 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-start">
+              <h6 class="uppercase text-lg my-2">Kirirtilmaganlar - <span class="font-bold text-lg text-blue-500">{{relativesCount}}</span> </h6>   
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class=" my-2 text-lg">Umumiy </h6>  <Tag class="px-2 text-sm " rounded severity="danger" :value="`${relativesCountChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-blue-600 text-base uppercase font-semibold"
+              <span class="text-blue-600 text-sm uppercase font-semibold"
                 >Bugungi tu'gilgan kunlar</span
               >
             </div>
@@ -548,6 +644,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-start"
             >
@@ -568,13 +665,25 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-start">
+              <h6 class="uppercase text-lg my-2">Xodimlar soni - <span class="font-bold text-lg text-blue-500">{{allBirthdayCadries}}</span> </h6>   
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class=" my-2 text-lg">Umumiy </h6>  <Tag class="px-2 text-sm " rounded severity="danger" :value="`${allBirthdayCadriesChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-green-500 text-base uppercase font-semibold"
+              <span class="text-green-500 text-sm uppercase font-semibold"
                 >Yangi xodimlar</span
               >
             </div>
@@ -584,6 +693,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-start"
             >
@@ -602,14 +712,26 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-start">
+              <h6 class="uppercase text-lg my-2">Xodimlar soni - <span class="font-bold text-lg text-blue-500">{{allNewCadries}}</span> </h6>   
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class=" my-2 text-lg">Umumiy </h6>  <Tag class="px-2 text-sm " rounded severity="danger" :value="`${allNewCadriesChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-red-600 text-base uppercase font-semibold"
-                >Faoliyati yakunlangan xodimlar</span
+              <span class="text-red-600 text-sm uppercase font-semibold"
+                >Faoliyati yakunlanganlar</span
               >
             </div>
             <div class="col-2 flex justify-content-end">
@@ -618,6 +740,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-start"
             >
@@ -638,14 +761,26 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-start">
+              <h6 class="uppercase text-lg my-2">Xodimlar soni - <span class="font-bold text-lg text-blue-500">{{allDeleteCadries}}</span> </h6>   
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class=" my-2 text-lg">Umumiy </h6>  <Tag class="px-2 text-sm " rounded severity="danger" :value="`${allDeleteCadriesChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 sm:col-6 md:col-6 lg:col-4 xl:col-3 p-3">
           <div class="grid card surface-0 shadow-1 px-2 pt-2 border-round-md">
+=======
+        <div class="col-12 sm:col-6  md:col-6 lg:col-4 xl:col-3 p-3">
+          <div class="grid card surface-0 shadow-6 px-2 pt-2 border-round-md">
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             <div class="col-10">
-              <span class="text-600 text-base uppercase font-semibold"
-                >Qora ro'yxatdagi xodimlar</span
+              <span class="text-600 text-sm uppercase font-semibold"
+                >Qora ro'yxatdagilar</span
               >
             </div>
             <div class="col-2 flex justify-content-end">
@@ -654,6 +789,7 @@
               ></i>
             </div>
             <Divider class="mt-2 mb-1" />
+<<<<<<< HEAD
             <div
               class="col-12 pb-0 flex justify-content-between align-items-start"
             >
@@ -671,6 +807,13 @@
                 severity="danger"
                 :value="`${pensionWomanChart}%`"
               ></Tag>
+=======
+            <div class="col-12 pb-0 flex justify-content-between align-items-start">
+              <h6 class="uppercase text-lg my-2">Xodimlar soni - <span class="font-bold text-blue-500">{{BlackList}}</span> </h6>   
+            </div>
+            <div class="col-12 pt-0 flex justify-content-between align-items-center">
+              <h6 class=" my-2 text-lg">Umumiy </h6>  <Tag class="px-2 text-sm " rounded severity="danger" :value="`${BlackListChart}%`"></Tag>
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
             </div>
           </div>
         </div>
@@ -1268,7 +1411,8 @@ export default {
       allCadry3045: 0,
       allCadry45: 0,
       alleducation_oliy: 0,
-      medical_examinations: 0,
+      meds: 0,
+      mednotCount: 0,
       vacations: 0,
       vacations_Dec: 0,
       vacationsChart: 0,
@@ -1284,8 +1428,17 @@ export default {
       allCadry3045Chart: 0,
       allCadry45Chart: 0,
       alleducation_oliyChart: 0,
+      allContractChart:0,
+      medsChart:0,
+      mednotCountChart:0,
+      careersCountChart:0,
+      relativesCountChart:0,
+      allBirthdayCadriesChart:0,
+      allNewCadriesChart:0,
+      allDeleteCadriesChart:0,
+      BlackListChart:0,
 
-      selectedCountry: null,
+
 
       items: [
         {
@@ -1468,43 +1621,175 @@ export default {
         .get_globalStatistic(params)
         .then((res) => {
           console.log(res.data);
+<<<<<<< HEAD
           this.allCadries = res.data.allCadriesCount;
+=======
+          this.allCadries = res.data.all_cadries_count;
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
           this.allVakant = res.data.vakant;
           this.allSverx = res.data.sverx;
           this.allPlan = res.data.plan;
-          this.allContract = res.data.contracts;
+          this.allContract = res.data.contract_cadries;
           this.allIronNote = 0;
           this.allManCadries = res.data.all_man_cadries;
           this.allWomanCadries = res.data.all_woman_cadries;
+<<<<<<< HEAD
           this.pensionWoman = res.data.pension_Woman;
           this.pensionsMan = res.data.pension_Man;
           this.allNewCadries = res.data.new_cadries;
+=======
+          this.pensionWoman = res.data.retired_Woman;
+          this.pensionsMan = res.data.retired_Man;
+          this.allNewCadries = res.data.newcadries;
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
           this.allDeleteCadries = res.data.delete_cadries;
           this.allBirthdayCadries = res.data.birthdays;
           this.allCadry30 = res.data.cadry30;
           this.allCadry3045 = res.data.cadry45 - res.data.cadry30;
           this.allCadry45 = res.data.all_cadries_count - res.data.cadry45;
+          this.careersCount = res.data.careersCount;
+          this.relativesCount = res.data.relativesCount;
 
-          this.alleducation_oliy = res.data.education_oliy;
-          this.multiAxisData.datasets[0].data[0] = res.data.education_oliy;
-          this.multiAxisData.datasets[0].data[1] = res.data.education_maxsus;
-          this.multiAxisData.datasets[0].data[2] = res.data.education_maxsus;
-          this.medical_examinations = res.data.medical_examinations;
+          careersCount: 0,
+            // relativesCount:0,
 
+<<<<<<< HEAD
+=======
+            (this.alleducation_oliy = res.data.highly_special_educations);
+          this.multiAxisData.datasets[0].data[0] =
+            res.data.highly_special_educations;
+          this.multiAxisData.datasets[0].data[1] =
+            res.data.medium_special_cadries;
+          this.multiAxisData.datasets[0].data[2] =
+            res.data.secondary_special_cadries;
+
+          this.aducationForeign.datasets[0].data[0] = res.data.abroads[0].count;
+          this.aducationForeign.datasets[0].data[1] = res.data.abroads[1].count;
+          this.aducationForeign.datasets[0].data[2] = res.data.abroads[2].count;
+          this.aducationForeign.datasets[0].data[3] = res.data.abroads[3].count;
+
+          this.govermentAcademy.datasets[0].data[0] =
+            res.data.academics[0].count;
+          this.govermentAcademy.datasets[0].data[1] =
+            res.data.academics[1].count;
+          this.govermentAcademy.datasets[0].data[2] =
+            res.data.academics[2].count;
+          this.govermentAcademy.datasets[0].data[3] =
+            res.data.academics[3].count;
+          this.govermentAcademy.datasets[0].data[4] =
+            res.data.academics[4].count;
+
+          this.stackedData.datasets[0].data[0] =
+            res.data.new_caries_year[0].count;
+          this.stackedData.datasets[0].data[1] =
+            res.data.new_caries_year[1].count;
+          this.stackedData.datasets[0].data[2] =
+            res.data.new_caries_year[2].count;
+          this.stackedData.datasets[0].data[3] =
+            res.data.new_caries_year[3].count;
+          this.stackedData.datasets[0].data[4] =
+            res.data.new_caries_year[4].count;
+          this.stackedData.datasets[0].data[5] =
+            res.data.new_caries_year[5].count;
+          this.stackedData.datasets[0].data[6] =
+            res.data.new_caries_year[6].count;
+          this.stackedData.datasets[0].data[7] =
+            res.data.new_caries_year[7].count;
+          this.stackedData.datasets[0].data[8] =
+            res.data.new_caries_year[8].count;
+          this.stackedData.datasets[0].data[9] =
+            res.data.new_caries_year[9].count;
+          this.stackedData.datasets[0].data[10] =
+            res.data.new_caries_year[10].count;
+          this.stackedData.datasets[0].data[11] =
+            res.data.new_caries_year[11].count;
+
+          this.stackedData.datasets[1].data[0] =
+            res.data.delete_cadries_year[0].count;
+          this.stackedData.datasets[1].data[1] =
+            res.data.delete_cadries_year[1].count;
+          this.stackedData.datasets[1].data[2] =
+            res.data.delete_cadries_year[2].count;
+          this.stackedData.datasets[1].data[3] =
+            res.data.delete_cadries_year[3].count;
+          this.stackedData.datasets[1].data[4] =
+            res.data.delete_cadries_year[4].count;
+          this.stackedData.datasets[1].data[5] =
+            res.data.delete_cadries_year[5].count;
+          this.stackedData.datasets[1].data[6] =
+            res.data.delete_cadries_year[6].count;
+          this.stackedData.datasets[1].data[7] =
+            res.data.delete_cadries_year[7].count;
+          this.stackedData.datasets[1].data[8] =
+            res.data.delete_cadries_year[8].count;
+          this.stackedData.datasets[1].data[9] =
+            res.data.delete_cadries_year[9].count;
+          this.stackedData.datasets[1].data[10] =
+            res.data.delete_cadries_year[10].count;
+          this.stackedData.datasets[1].data[11] =
+            res.data.delete_cadries_year[11].count;
+
+          this.meds = res.data.meds;
+          this.mednotCount = res.data.mednotCount;
+
+          this.medsChart = Math.floor(
+            (res.data.meds / res.data.all_cadries_count) * 100
+          );
+          this.mednotCountChart = Math.floor(
+            (res.data.mednotCount / res.data.all_cadries_count) * 100
+          );
+
+          this.careersCountChart = Math.floor(
+            (res.data.careersCount / res.data.all_cadries_count) * 100
+          );
+
+          this.relativesCountChart = Math.floor(
+            (res.data.relativesCount / res.data.all_cadries_count) * 100
+          );
+
+          this.allBirthdayCadriesChart = Math.floor(
+            (res.data.birthdays / res.data.all_cadries_count) * 100
+          );
+
+          this.allNewCadriesChart = Math.floor(
+            (res.data.newcadries / res.data.all_cadries_count) * 100
+          );
+
+          this.allDeleteCadriesChart = Math.floor(
+            (res.data.delete_cadries / res.data.all_cadries_count) * 100
+          );
+
+          this.BlackListChart = Math.floor(
+            (res.data.black_list_cadries / res.data.all_cadries_count) * 100
+          );
+
+          
+
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
           this.vacations = res.data.vacations;
-          this.vacations_Dec = res.data.vacations_Dec;
+          this.vacations_Dec = res.data.vacations_decret;
 
           this.vacationsChart = Math.floor(
             (res.data.vacations / res.data.all_cadries_count) * 100
           );
 
           this.vacations_DecChart = Math.floor(
+<<<<<<< HEAD
             (res.data.vacations_Dec / res.data.allCadriesCount) * 100
+=======
+            (res.data.vacations_decret / res.data.all_cadries_count) * 100
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
           );
 
-          this.BlackList = res.data.BlackList;
+          this.allContractChart = Math.floor(
+            (res.data.contract_cadries / res.data.all_cadries_count) * 100
+          );
+
+
+          this.BlackList = res.data.black_list_cadries;
 
           this.allManChart = Math.floor(
+<<<<<<< HEAD
             (res.data.all_man_cadries / res.data.allCadriesCount) * 100
           );
           this.allWomanChart = 100 - this.allManChart;
@@ -1513,6 +1798,16 @@ export default {
           );
           this.pensionWomanChart = Math.floor(
             (res.data.pension_Woman / res.data.allCadriesCount) * 100
+=======
+            (res.data.all_man_cadries / res.data.all_cadries_count) * 100
+          );
+          this.allWomanChart = 100 - this.allManChart;
+          this.pensionsManChart = Math.floor(
+            (res.data.retired_Man / res.data.all_cadries_count) * 100
+          );
+          this.pensionWomanChart = Math.floor(
+            (res.data.retired_WoMan / res.data.all_cadries_count) * 100
+>>>>>>> ce6b5b1722d71b21bda1101fb744787b6ecd5771
           );
           this.allCadry30Chart = Math.floor(
             (res.data.cadry30 / res.data.allCadriesCount) * 100
@@ -1526,7 +1821,6 @@ export default {
           this.alleducation_oliyChart = Math.floor(
             (res.data.education_oliy / res.data.all_cadries_count) * 100
           );
-
           this.controlLoader(false);
         })
         .catch((error) => {
@@ -1606,8 +1900,8 @@ export default {
 
     changeOrganization(event) {
       this.organization.organization_id = event.value.id;
-      this.get_Statistic(this.organization);
       this.organization.department_id = null;
+      this.get_Statistic(this.organization);
       this.departmentValue = null;
       this.get_Department(event.value.id);
 

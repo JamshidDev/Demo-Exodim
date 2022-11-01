@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <Menubar :model="menuBarRouter" class=" font-medium " />
+    <Menubar :model="item" class=" font-medium " />
   </div>
 </template>
 <script>
@@ -401,10 +401,134 @@ export default {
         },
       ],
       customBarRouter: [],
+      item:[
+        {
+          label: "Global",
+          icon: "pi pi-globe",
+          visible: () =>this.get_TitlePermission(["management_statistics","management_organizations" ]),
+          items: [
+            {
+              label: "Statistika",
+              icon: "pi pi-chart-pie",
+              to: '/admin/statistic',
+              visible: () =>this.get_adminPermissions("management_statistics"),
+            },
+            {
+              label: "Korxonalar",
+              icon: "pi pi-building",
+              visible: () =>this.get_adminPermissions("management_organizations"),
+              to: '/admin/employees',
+            },
+          ],
+        },
+        {
+          label: "Asosiy",
+          icon: "pi pi-microsoft",
+          visible: () =>this.get_TitlePermission(["organization_statistics","organization_cadries", "organization_departments" ,"organization_staffs", "organization_archive" ]),
+          items: [
+            {
+              label: "Statistika",
+              icon: "pi pi-chart-pie",
+              to: '/admin/partstatistic',
+              visible: () =>this.get_adminPermissions("organization_statistics"),
+            },
+            {
+              label: "Xodimlar",
+              icon: "pi pi-users",
+              to: '/admin/partemployee',
+              visible: () =>this.get_adminPermissions("organization_cadries"),
+            },
+            {
+              label: "Bo'limlar",
+              icon: "pi pi-sitemap",
+              to: '/admin/partfactory',
+              visible: () =>this.get_adminPermissions("organization_departments"),
+            },
+            {
+              label: "Shtat lavozimlari",
+              icon: "pi pi-align-center",
+              to: '/admin/position',
+              visible: () =>this.get_adminPermissions("organization_staffs"),
+            },
+            {
+              label: "Arxiv",
+              icon: "pi pi-shield",
+              to: '/admin/historyemployee',
+              visible: () =>this.get_adminPermissions("organization_archive"),
+            },
+          ],
+        },
+        {
+          label: "Monitoring",
+          icon: "pi pi-th-large",
+          visible: () =>this.get_TitlePermission(["organization_vacations","organization_meds","organization_discips", "organization_incentives" ]),
+          
+          items: [
+            {
+              label: "Ta'tillar",
+              icon: "pi pi-calendar",
+              visible: () =>this.get_adminPermissions("organization_vacations"),
+              to: '/admin/vacation',
+            },
+            {
+              label: "Tibbiy ko'rik",
+              icon: "pi pi-id-card",
+              visible: () =>this.get_adminPermissions("organization_meds"),
+              to: '/admin/meds',
+            },
+            {
+              label: "Jazolanganlar",
+              icon: "pi pi-th-large",
+              visible: () =>this.get_adminPermissions("organization_discips"),
+              to: '/admin/punishment',
+            },
+            {
+              label: "Mukofatlanganlar",
+              icon: "pi pi-star",
+              visible: () =>this.get_adminPermissions("organization_incentives"),
+              to: '/admin/incentive',
+            },
+          ],
+        },
+        {
+          label: "Xavsizlik",
+          icon: "pi pi-shield",
+          visible: () =>this.get_adminPermissions("admin"),
+          items: [
+            {
+              label: "Ma'sullar",
+              icon: "pi pi-user",
+              to: '/admin/superadmin',
+              visible: () =>this.get_adminPermissions("admin"),
+            },
+            {
+              label: "Kirishlar",
+              icon: "pi pi-book",
+              visible: () =>this.get_adminPermissions("admin"),
+            },
+            {
+              label: "Amallar",
+              icon: "pi pi-shield",
+              visible: () =>this.get_adminPermissions("admin"),
+            },
+          ],
+        },
+        {
+          label: "Platforma",
+          icon: "pi pi-prime",
+          items: [
+            {
+              label: "Qo'llanma",
+              icon: "pi pi-book",
+            },
+          ],
+        },
+        
+      ],
     };
   },
   computed:{
-    ...mapGetters(["get_adminPermissions"])
+    ...mapGetters(["get_adminPermissions","get_TitlePermission"])
   },
   methods: {
    async generateBarRouter() {

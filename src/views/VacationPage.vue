@@ -13,22 +13,6 @@
       >
         <template #header>
           <div class="grid">
-            <div class="col-12 xl:col-6 lg:col-6 md:col-6 sm:col-6">
-              <Button
-                icon="pi pi-plus"
-                label="Qo'shish"
-                class="p-button-info p-button-sm mr-2 xl:ml-2 lg:ml-2"
-                @click="addItemVacation()"
-                v-tooltip.bottom="`Xodimni ta'tilga yuborish`"
-              ></Button>
-              <Button
-                icon="pi pi-plus"
-                label="1 C"
-                class="p-button-warning p-button-sm"
-                @click="addItemVacation()"
-                v-tooltip.bottom="`Xodimni ta'tilga 1c orqali yuborish`"
-              ></Button>
-            </div>
             <div
               class="
                 col-12
@@ -36,9 +20,6 @@
                 lg:col-6
                 md:col-6
                 sm:col-6
-                flex
-                justify-content-end
-                align-items-center
               "
             >
               <InputText
@@ -49,6 +30,19 @@
                 @keyup.enter="searchByName()"
               />
             </div>
+
+            <div class="col-12 xl:col-6 lg:col-6 md:col-6 sm:col-6 flex
+                justify-content-end
+                align-items-center">
+              <Button
+                icon="pi pi-plus"
+                label="Qo'shish"
+                class="p-button-info p-button-sm xl:ml-2 lg:ml-2"
+                @click="addItemVacation()"
+                v-tooltip.bottom="`Xodimni ta'tilga yuborish`"
+              ></Button>
+            </div>
+           
           </div>
         </template>
         <Column header="" style="min-width: 30px; width: 40px">
@@ -67,8 +61,8 @@
               <Image
                 :src="slotProps.data.cadry.photo"
                 :alt="slotProps.data.cadry.fullname"
-                width="30"
-                height="30"
+                width="40"
+                height="40"
                 preview
               />
             </div>
@@ -398,6 +392,7 @@ export default {
       params: {
         page: 1,
         per_page: 10,
+        search:null,
       },
 
       search_params: {
@@ -558,9 +553,6 @@ export default {
         : "";
     },
 
-    searchByName(event) {
-      console.log(event);
-    },
     search_Cadry(event) {
       this.search_params.search = event.value;
       VacationService.search_Cadry(this.search_params)
@@ -570,6 +562,11 @@ export default {
         .catch((error) => {
           console.log(error);
         });
+    },
+
+    searchByName(){
+      this.params.search = this.searchPartName;
+      this.get_Vacations(this.params, true);
     },
 
     countDay(date2, date1) {

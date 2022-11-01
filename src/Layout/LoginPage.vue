@@ -24,7 +24,7 @@
         Exodim versiya 2.0.0
       </div>
     </div>
-    <div class="grid w-full lg:pt-4 xl:pt-8">
+    <div class="grid w-full lg:pt-0 xl:pt-8">
      
       <div class="col-12 xl:col-8 lg:col-7 pt-8 hidden xl:block lg:block">
         <div class="grid">
@@ -133,6 +133,8 @@ export default {
         .then((res) => {
           console.log(res.data);
           localStorage.setItem("access_token", res.data.access_token);
+          localStorage.setItem("token_created_date", res.data.created_at);
+
 
           authService
             .get_AdminDetails()
@@ -151,6 +153,15 @@ export default {
               localStorage.setItem(
                 "admin_avatar",
                 res.data.photo
+              );
+
+              localStorage.setItem(
+                "organization",
+                JSON.stringify(res.data.organization)
+              );
+              localStorage.setItem(
+                "profil",
+                JSON.stringify(res.data)
               );
 
               localStorage.setItem(

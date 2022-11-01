@@ -5,7 +5,7 @@
     </div>
   </div>
  <div class="col-12"></div>
- <div v-if="!barLoader" class="grid card surface-0 py-4">
+ <div v-if="!barLoader" class="grid card surface-0 py-4 px-2">
     <div class="col-12">
       <div class="flex justify-content-end">
         <Button
@@ -872,7 +872,7 @@ export default {
         last_name: null,
         first_name: null,
         middle_name: null,
-        birth_date: null,
+        birht_date: null,
         birth_region_id: null,
         birth_city_id: null,
         address_region_id: null,
@@ -1054,11 +1054,10 @@ export default {
     // update cadry details
     updateEmployee(isFormValid) {
       this.submitted = true;
-      console.log(this.bornRegion);
       this.cadry.first_name = this.firstName;
       this.cadry.last_name = this.lastName;
       this.cadry.middle_name = this.thirdName;
-      this.cadry.birth_date = formatter.outDateFormatter(this.bornDate);
+      this.cadry.birht_date = formatter.outDateFormatter(this.bornDate);
       this.cadry.birth_region_id = this.bornRegion.id;
       this.cadry.birth_city_id = this.bornDistric.id;
       this.cadry.address_region_id = this.adressRegion;

@@ -104,15 +104,15 @@
               </div>
               <div
                 v-show="slotProps.data.days <= 10 && slotProps.data.days > 0"
-                class="w-full text-center text-yellow-500"
+                class="w-full text-center"
               >
-                {{ slotProps.data.days }}
+                {{ slotProps.data.days }} kun qoldi
               </div>
               <div
                 v-show="slotProps.data.days > 10"
-                class="w-full text-center text-blue-500"
+                class="w-full text-center"
               >
-                {{ slotProps.data.days }}
+                {{ slotProps.data.days }} kun qoldi
               </div>
             </div>
           </template>
@@ -461,6 +461,7 @@ export default {
       medService
         .get_CadryMed(params)
         .then((res) => {
+          console.log(res.data.cadries.data);
           this.totalPage = res.data.cadries.pagination.total;
           let number = (this.params.page - 1) * this.params.per_page;
           res.data.cadries.data.forEach((item) => {
@@ -523,7 +524,7 @@ export default {
       this.refresh_date1 = formatter.interDateFormatter(item.date1);
       this.refresh_date2 = formatter.interDateFormatter(item.date2);
       this.refresh_comment = "";
-      this.refresh_cadry_id = item.id;
+      this.refresh_cadry_id = item.cadry_id;
       this.controlNewDialog(true);
     },
     refreshMed() {
@@ -544,7 +545,7 @@ export default {
           this.$toast.add({
             severity: "success",
             summary: "Muvofaqqiyatli bajarildi",
-            detail: "Tahrirlandi",
+            detail: "Yangilandi",
             life: 2000,
           });
         });
@@ -565,7 +566,6 @@ export default {
     },
     searchByName() {
       this.params.search = this.searchCadryName;
-      console.log(this.searchCadryName);
       this.get_MedList(this.params, false);
 
     },

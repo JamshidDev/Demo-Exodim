@@ -1,7 +1,7 @@
 <template>
-  <div class="grid card surface-0 shadow-1 py-4 px-1">
+  <div class="grid  py-4 px-1">
     <div class="col-12">
-      <div class="grid">
+      <div class="grid px-2">
         <div class="col-12">
           <div class="w-full flex justify-content-between align-items-center">
             <Button
@@ -33,7 +33,7 @@
               v-tooltip.bottom="`Ma'lumotlarni lotinchaga o'girish`"
             />
           </div>
-          <div class="col-12 flex justify-content-center xl:hidden lg:hidden md:hidden">
+          <div class="col-12 flex mt-4 xl:mt-0 lg:mt-0 md:mt-0 justify-content-center xl:hidden lg:hidden md:hidden">
             <SelectButton
               v-model="live_router"
               :options="routerList"
@@ -51,7 +51,7 @@
           </div>
         </div>
 
-        <div class="col-12 pt-0">
+        <div class="col-12 pt-0 card surface-0 shadow-1 mt-4">
           <router-view
             v-slot="{ Component }"
           >

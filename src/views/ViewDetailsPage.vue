@@ -8,20 +8,19 @@
             grid
             shadow-1
             border-round-md
-            
-            border-1 border-300
             mb-4
-            document_container
+            p-4 xl:p-2 lg:p-2 md:p-2
           "
+          :class="[isDark? 'custom_bg':'bg-primary-reverse']"
         >
-          <div class="col-12 md:col-4 xl:col-2 p-0">
+          <div class="col-12 md:col-4 lg:col-3 xl:col-2 p-0">
             <img class="resume_picture" :src="cadry.phote" alt="" />
           </div>
-          <div class="col-12 md:col-8 xl:col-6 py-2">
+          <div class="col-12 md:col-8 lg:col-5 xl:col-6 py-2">
             <h6 class="text-2xl text-800 my-2 uppercase font-bold">
               {{ cadry.fullName }}
             </h6>
-            <h6 class="text-base text-800 my-3 font-bold">
+            <h6 class="text-base text-800 my-3 font-semibold">
               {{ cadry.post_name }}
             </h6>
             <h6 class="text-base text-800 my-3 font-bold flex">
@@ -37,7 +36,7 @@
             <Button label="Yuklash" @click="DowloadResume($route.params.id)" class="p-button-raised p-button-info" />
           </div>
 
-          <div class="col-12 py-4 pl-4 md:col-12 xl:col-4">
+          <div class="col-12 py-4 pl-4 md:col-12 lg:col-4 xl:col-4">
             <h6 class="text-base text-900 my-2">
               <i class="pi pi-phone text-blue-500 font-bold pr-2 text-xl"></i>
               {{ cadry.phone }}
@@ -67,17 +66,19 @@
             </h6>
           </div>
         </div>
+
         <div class="grid">
           <div class="col-12 xl:col-4 pr-4">
             <div
+            :class="[isDark? 'custom_bg':'bg-primary-reverse']"
               class="
                 grid
                 4
                 shadow-1
                 border-round-md
+
                 mt-3
-                border-1 border-300
-                document_container
+                bg-primary-reverse
                 py-4
                 px-4
               "
@@ -201,16 +202,17 @@
           </div>
 
           <div
+          :class="[isDark? 'custom_bg':'bg-primary-reverse']"
             class="
                 col-12
               xl:col-8
               shadow-1
               border-round-md
               mt-4
-              border-1 border-300
-              document_container
+              bg-primary-reverse
               py-4
               px-2
+              
             "
           >
             <div class="grid">
@@ -231,12 +233,12 @@
                   :key="career.id"
                 >
                   <div class="col-2">
-                    <h6 class="text-center">
+                    <h6 class="text-center font-semibold text-600">
                       {{ career.date1 }}- {{ career.date2? career.date2 : 'h.gacha' }}
                     </h6>
                   </div>
                   <div class="col-10">
-                    <h6>
+                    <h6 class="font-semibold text-600">
                       {{ career.staff_name }}
                     </h6>
                   </div>
@@ -532,6 +534,7 @@ import EksportService from "../service/servises/EksportService";
 import formatter from "../util/formatter";
 import ProgressBarLoader from "../components/loaders/ProgressBarLoader.vue";
 import WordTemplate from "../components/Eksport/WordTemplate.vue";
+import { mapGetters  } from "vuex";
 export default {
   components: {
     ProgressBarLoader,
@@ -540,6 +543,7 @@ export default {
   data() {
     return {
       loader: false,
+      isDark:false,
       formatter,
       activeIndex: 0,
       visibleFull: false,
@@ -664,27 +668,23 @@ export default {
        this.$router.push("/admin/partemployee") 
     }
   },
+  computed:{
+  ...mapGetters(["get_darkTheme"])
+  },
   created() {
+    this.isDark = this.get_darkTheme;
     this.showResume(this.$route.params.id);
   },
 };
 </script>
   <style lang="scss"  >
-.document_container {
-  background-color: #ffffff;
-}
 .resume_picture {
-  width: 160px;
+  width: 160px !important;
+  max-width: 160px !important;
   min-height: 100% !important;
 }
-.resume_bg {
-  position: absolute;
-  top: 0px;
-  right: 00px;
-  width: 190px;
-  height: 200px;
-  background-color: #ecf7ff !important;
-  z-index: 9;
+.custom_bg{
+  background: #313a46 !important;
 }
 .cutom_mr {
   margin-right: 200px !important;
@@ -701,7 +701,7 @@ export default {
 }
 
 .relative_border {
-  border: 1px solid #e4e4e4 !important;
+  border: 0px solid #e4e4e4 !important;
 }
 .custom .p-scrollpanel-wrapper {
   border-right: 0px solid #f4f4f4;

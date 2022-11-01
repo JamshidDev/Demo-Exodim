@@ -10,6 +10,17 @@ const getters = {
     get_adminPermissions:(state)=> (key)=>{
         return  state.adminPermissions.length>0 ? state.adminPermissions.includes(key) : null;
     },
+    get_TitlePermission:(state)=>(key)=>{
+        let permission = [];
+        key.forEach((item)=>{
+            if(state.adminPermissions.includes(item)){
+                permission.push(true);
+            }
+        })
+
+        return permission.includes(true)
+
+    },
     get_adminDetails(state){
         return state.adminDetails
     }

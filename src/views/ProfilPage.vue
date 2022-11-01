@@ -4,30 +4,16 @@
             <div class="grid">
               <div class="col-12">
                 <div class="flex justify-content-center pb-2"><Avatar :image="admin_avatar()" size="xlarge" class="mr-2" shape="circle" /></div>
-                <h6  class="text-center xl:text-lg font-medium uppercase mb-6" >Jamshid Raximov Shuxrat o'g'li</h6>
+                <h6  class="text-center xl:text-lg font-medium uppercase mb-6" >{{get_Name()}}</h6>
               </div>
                
-                <div class="col-12">
+                <!-- <div class="col-12">
                   <PanelMenu :model="items" />
-                </div>
+                </div> -->
             </div>
         </div>
 
         <div class="col-12 sm:col-12 md:col-12 lg:col-8 xl:col-9">
-            <!-- <div class="card border-1 border-300 px-4 min-h-full">
-                <div class="col-12 flex justify-content-between px-1">
-                    <h5>Kirishlar</h5>
-                    <div>
-                        <Button icon="pi pi-bars" class="p-button-sm p-button-secondary p-button-outlined"  @click="toggle"  />
-                    <Menu id="overlay_menu" ref="menu" :model="items" :popup="true" class="font-medium" />
-                    </div>
-                </div>
-                <ScrollPanel style="width: 100%; height:700px"  class="custombar1">
-                   <active-seans style="min-width:500px" ></active-seans>
-                </ScrollPanel>
-            </div>
-            -->
-               
             
         </div>
     </div>
@@ -63,7 +49,11 @@ export default {
     },
     admin_avatar(){
       return localStorage.getItem("admin_avatar")? localStorage.getItem("admin_avatar") : 'https://railwaynok.uz/img/avatar_20.4e17c1b7.jpg'
-    }
+    },
+    get_Name(){
+      let profile = JSON.parse(localStorage.getItem("profil"))
+      return profile.name
+    },
   },
 };
 </script>

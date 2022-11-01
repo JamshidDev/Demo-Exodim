@@ -4,7 +4,7 @@
       <progress-bar-loader></progress-bar-loader>
     </div>
   </div>
-  <div class="grid card py-4" v-if="!barLoader">
+  <div class="grid card xl:p-4 lg:p-2 pt-4 px-0" v-if="!barLoader">
 
     <div class="col-12 pt-1 mb-2">
       <div class="grid">

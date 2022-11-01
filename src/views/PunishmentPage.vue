@@ -114,7 +114,7 @@
       >
         <template #header>
           <h6 class="uppercase text-lg text-red-500 font-medium">
-            Rag'batlantirishlar
+            Jazolanganlar
           </h6>
         </template>
         <div class="grid">

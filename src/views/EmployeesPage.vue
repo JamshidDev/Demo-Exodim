@@ -298,8 +298,15 @@
           </div>
           <div class="col-12 flex justify-content-between align-items-center">
             <p class="text-left text-600 mb-0">
-              Qo'shimcha filter sozlamalarini sozlash
+              Filter sozlamalar
             </p>
+            <Tag
+              class="cursor-pointer mr-4"
+              value="Izlash"
+              severity="info"
+              icon="pi pi-search"
+              @click="searchBtn()"
+            ></Tag>
             <Tag
               class="cursor-pointer"
               value="Tozalash"
@@ -346,8 +353,8 @@
               <Image
                 :src="slotProps.data.photo"
                 :alt="slotProps.data.fullname"
-                width="30"
-                height="30"
+                width="40"
+                height="40"
                 preview
               />
             </div>
@@ -406,7 +413,7 @@
         <Column :exportable="false" style="min-width:100px; width: 120px;">
           <template #body="slotProps">
             <div class="flex w-full align-items-center gap-2">
-              <download-button  v-tooltip.left="`Ma'lumotlarni ko'rish`" :icon="'pi pi-id-card'"   @click="openResume(slotProps.data.id)"></download-button>
+              <download-button  v-tooltip.left="`Ma'lumotlarni ko'rish`" :icon="'pi pi-id-card'"   @click="goPushDetails(slotProps.data.id)"></download-button>
               <download-button  v-tooltip.left="`Ma'lumotlarni yuklash`" :icon="'pi pi-cloud-download'" @click="DowloadResume(slotProps.data.id)"></download-button>
             </div>
           </template>
@@ -429,7 +436,6 @@
     <div class="col-12">
       <Toast position="bottom-right" />
       <word-template :cadry_id="Dowload_cadry_id" v-show="false" ref="word_resume"></word-template>
-      <employee-details ref="show_resume"></employee-details>
     </div>
   </div>
 </template>
@@ -440,10 +446,9 @@ import globalFactoryService from "../service/servises/globalFactoryService";
 import EmployeeLoader from "../components/loaders/EmployeeLoader.vue";
 import SearchNotFoundPage from "../components/EmptyComponent/SearchNotFoundPage.vue";
 import WordTemplate from "../components/Eksport/WordTemplate.vue";
-import EmployeeDetails from "../components/partEmployee/EmployeeDetails.vue";
 import DownloadButton from '@/components/buttons/DownloadButton'
 export default {
-  components: { EmployeeLoader, TablePagination, SearchNotFoundPage,WordTemplate,EmployeeDetails,DownloadButton },
+  components: { EmployeeLoader, TablePagination, SearchNotFoundPage,WordTemplate,DownloadButton },
   data() {
     return {
       displayBasic: true,
@@ -735,10 +740,8 @@ export default {
       console.table(id);
      this.$refs.word_resume.generateWord(id)
     },
-
-    // Opent resume
-    openResume(id){
-      this.$refs.show_resume.showResume(id)
+    goPushDetails(id) {
+      this.$router.push(`/admin/employee/view/${id}`);
     },
 
     beforeOpen(event){

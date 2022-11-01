@@ -23,18 +23,31 @@
                 @keyup.enter="searchByName()"
               />
             </div>
-            <div class="col-6 flex justify-content-end">
+            <div class="col-6 flex justify-content-end align-items-center">
               <Button
                 icon="pi pi-sitemap"
                 label="Biriktirish"
-                class="p-button-warning p-button-sm mr-2"
+                class="p-button-warning p-button-sm mr-2 xl:block lg:block md:block hidden"
                 @click="addStuff()"
                 v-tooltip.bottom="`Bo'limga shtat lavozim biriktirish`"
               ></Button>
               <Button
                 icon="pi pi-plus"
                 label="Qo'shish"
-                class="p-button-info p-button-sm"
+                class="p-button-info p-button-sm xl:block lg:block md:block hidden"
+                @click="addItemPart()"
+                v-tooltip.bottom="`Yangi bo'lim qo'shish`"
+              ></Button>
+
+              <Button
+                icon="pi pi-sitemap"
+                class="p-button-warning p-button-sm mr-2 xl:hidden lg:hidden md:hidden "
+                @click="addStuff()"
+                v-tooltip.bottom="`Bo'limga shtat lavozim biriktirish`"
+              ></Button>
+              <Button
+                icon="pi pi-plus"
+                class="p-button-info p-button-sm xl:hidden lg:hidden md:hidden "
                 @click="addItemPart()"
                 v-tooltip.bottom="`Yangi bo'lim qo'shish`"
               ></Button>
@@ -85,6 +98,8 @@
                   lg:text-lg
                   xl:text-lg
                   font-medium
+                  flex align-items-center
+                  justify-content-center
                 "
               >
                 <div class="text-center" v-show="slotProps.data.vakan != 0">
@@ -106,6 +121,8 @@
                   lg:text-lg
                   xl:text-lg
                   font-medium
+                  flex align-items-center
+                  justify-content-center
                 "
               >
                 <div class="text-center" v-show="slotProps.data.sverx != 0">

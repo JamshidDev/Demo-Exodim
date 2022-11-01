@@ -20,11 +20,6 @@
        <div class="pb-2  px-2 mt-1 min_main">
          <router-view ></router-view>
        </div>
-       <div class="pb-2 card px-2 mb-3 ">
-          <p class="text-center font-medium text-400">Dasturchilar <a href="https://telegram.me/Jamacoder">Jamshid</a> va <a href="https://telegram.me/losemanki6656">Jobir</a> </p>
-       </div>
-        
-
         <!-- <AppFooter /> -->
       </div>
       
@@ -52,7 +47,7 @@ export default {
       sidebar_overall: false,
       mobile_active: false,
       menuBar:true,
-      mobile_screen_width:1500,
+      mobile_screen_width:991,
     };
   },
   created() {

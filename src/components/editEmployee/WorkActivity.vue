@@ -1,10 +1,10 @@
 <template >
-  <div class="grid card py-4" v-if="barLoader">
+  <div class="grid card" v-if="barLoader">
     <div class="col-12">
       <progress-bar-loader></progress-bar-loader>
     </div>
   </div>
-  <div class="grid card py-4" v-if="!barLoader">
+  <div class="grid card xl:p-4 lg:p-2 pt-4 px-0" v-if="!barLoader">
     <div class="col-12 py-1 px-0 mb-6" v-show="careerList.length == 0">
       <add-button
         :title="'Mehnat faoliyatini qo\'shish'"

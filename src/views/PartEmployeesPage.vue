@@ -264,7 +264,7 @@
         </template>
         <Column header="No">
           <template #body="slotProps">
-            <div class="w-full text-center text-lg font-semibold">
+            <div class="w-full text-center text-lg font-medium">
               {{ slotProps.data.number }}
             </div>
           </template>
@@ -294,6 +294,7 @@
                 font-medium
                 hover:text-blue-500
                 cursor-pointer
+                
               "
               v-tooltip.bottom="`Tahrirlash`"
               @click="goPush(slotProps.data.id)"
@@ -660,7 +661,6 @@ export default {
 </script>
 <style lang="scss">
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
